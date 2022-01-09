@@ -75,15 +75,15 @@ Shader "Custom/NPRShader"
             // put more per-instance properties here
             UNITY_INSTANCING_BUFFER_END(Props)
 
-        float4 Lightingcell(SurfaceOutput s, float3 lightDir, float atten)
-        {
-            float ndotl = dot(normalize(s.Normal), normalize(lightDir)) * 0.5 + 0.5;
-            ndotl = ndotl * ndotl * ndotl;
+        //float4 Lightingcell(SurfaceOutput s, float3 lightDir, float atten)
+        //{
+        //    float ndotl = dot(normalize(s.Normal), normalize(lightDir)) * 0.5 + 0.5;
+        //    ndotl = ndotl * ndotl * ndotl;
 
-            ndotl = ceil(ndotl * _ShadeLevel) / _ShadeLevel;
+        //    ndotl = ceil(ndotl * _ShadeLevel) / _ShadeLevel;
 
-            return ndotl;
-        }
+        //    return ndotl;
+        //}
 
         void surf(Input IN, inout SurfaceOutput o)
         {
